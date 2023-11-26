@@ -122,8 +122,8 @@ que se trata de un titulo */
 #barra a{
     color: white;
     text-decoration: none;
-    margin-right: 50px; /* margen separar links */
-    margin-left: 50px;
+    margin-right: 20px; /* margen separar links */
+    margin-left: 20px;
 }
 
 /* efecto al poner mouse arriba */
