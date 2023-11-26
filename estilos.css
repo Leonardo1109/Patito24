@@ -1,3 +1,4 @@
+/* Color de la pagina */
 body {
     margin: 0;
     background: rgb(199, 66, 29);
@@ -9,21 +10,29 @@ body {
     min-height: 100vh;
 }
 
-#barra {
-    background: black;
-    padding: 30px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: -5px;
+/* Boton de inicio */
+button { 
+    font-family: 'Bruno Ace SC', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
-#barra a {
+/* Cualquier link, texto blanco */
+a {
     color: white;
     text-decoration: none;
-    margin-right: 140px; /* margen a la derecha para separar los enlaces */
+    transition: 2s;
 }
 
+/* cambia a azul cuando dejamos el mouse arriba */
+a:hover {
+    color: blue;
+}
+
+/* Cuadro negro donde mostraremos los platillos y su descripcion */
 .formulario {
     width: 1000px;
     margin: 100px;
@@ -33,80 +42,51 @@ body {
     text-align: center;
 }
 
+/* Tablero central donde moveremos el contenido */
 .contenido-central {
     text-align: center;
     color: white;
-    margin-top: 80px;
+    margin-top: 80px; /* Evitar que choque el titulo con la barra */
 }
 
+/* Texto del index */
 .texto-centro {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Bruno Ace SC', sans-serif;
     font-size: 100px;
-    letter-spacing: 0px;
-    word-spacing: 0px;
     color: black;
-    font-weight: bold;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
 }
 
+/* Texto principal de las paginas mismo formato que el index para mostrar
+que se trata de un titulo */
 .texto-titular {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Bruno Ace SC', sans-serif;
     font-size: 40px;
-    letter-spacing: 0px;
-    word-spacing: 0px;
     color: black;
-    font-weight: bold;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
 }
 
+/* Texto titular de la descripcion de los platillos */
 .texto-principal {
-    font-family: 'Anton', sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     font-size: 40px;
     letter-spacing: 0px;
     word-spacing: 0px;
     color: white;
     font-weight: bold;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
 }
 
-button {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
-
+/* Div donde va la informacion de contacto*/
 .contacto {
     background: black;
     color: white;
-    padding: 30px;
+    padding: 10px;
     width: 100%;
     height: 80px;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    position: fixed; /* no ve desplace, se mantenga en la pagina */
+    bottom: 0; /* poner al fondo */
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    transition: 2s;
-}
-
-a:hover {
-    color: blue;
-}
-
+/* separa los elementos dentro del div en columnas */
 .contenedor {
     display: flex;
     flex-direction: column;
@@ -118,12 +98,36 @@ a:hover {
     justify-content: center;
 }
 
+/* Cuadro negro para visualizar el contenido de los elementos en el menu */
 .cuadro {
-    flex: 1;
     width: 200px;
     height: 200px;
     padding: 20px;
-    margin: 10px;
+    margin: 10px; /* distancia entre los elementos */
     background-color: black;
     text-align: center;
+}
+
+/* Menu superior, donde vamos a movernos por los html */
+#barra { 
+    background: black;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+}
+
+/* links de la barra */
+#barra a{
+    color: white;
+    text-decoration: none;
+    margin-right: 50px; /* margen separar links */
+    margin-left: 50px;
+}
+
+/* efecto al poner mouse arriba */
+#barra a:hover{
+    transition: 2s;
+    color: blue;
 }
